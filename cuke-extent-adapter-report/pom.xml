@@ -38,6 +38,12 @@
 			<artifactId>cucumber-junit</artifactId>
 			<version>${cucumber.version}</version>
 		</dependency>
+		
+		<!-- <dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.1.2</version>
+		</dependency> -->
 	</dependencies>
 
 	<build>
