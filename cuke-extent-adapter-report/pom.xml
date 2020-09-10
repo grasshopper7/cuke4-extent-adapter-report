@@ -16,34 +16,53 @@
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports-cucumber4-adapter</artifactId>
-			<version>1.0.8</version>
-			<exclusions>
-				<exclusion>
-					<groupId>io.cucumber</groupId>
-					<artifactId>cucumber-java</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>io.cucumber</groupId>
-					<artifactId>cucumber-core</artifactId>
-				</exclusion>
-			</exclusions>
+			<version>1.2.1</version>
+			<!-- Uncomment the exclusion if using cucumber-java8 jar -->
+			<!-- <exclusions> <exclusion> <groupId>io.cucumber</groupId> <artifactId>cucumber-java</artifactId> 
+				</exclusion> </exclusions> -->
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-java8</artifactId>
+			<artifactId>cucumber-java</artifactId>
 			<version>${cucumber.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
 			<version>${cucumber.version}</version>
+			<scope>test</scope>
 		</dependency>
-		
-		<!-- <dependency>
+
+		<!-- Uncomment the exclusion for version 1.2.0 and 1.2.1 to remove testng 
+			version 7 dependency OR add version 5.0.3 explicitly -->
+		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>4.1.2</version>
-		</dependency> -->
+			<version>5.0.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+			<scope>test</scope>
+		</dependency>
+		<!-- <dependency> <groupId>com.aventstack</groupId> <artifactId>extentreports</artifactId> 
+			<version>5.0.3</version> </dependency> -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
